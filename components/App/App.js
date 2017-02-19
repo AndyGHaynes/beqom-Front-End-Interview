@@ -1,4 +1,5 @@
 import React from 'react';
+import s from './App.css';
 import rootReducer from '../../reducers';
 import VideoSearchContainer from '../../containers/VideoSearch';
 import VideoResultsContainer from '../../containers/VideoResults';
@@ -16,7 +17,7 @@ class App extends React.Component {
   render() {
     return (
       <Provider store={this.store}>
-        <div>
+        <div className={s.app}>
           <Grid>
             <Row>
               <Col md={12}>
@@ -24,14 +25,19 @@ class App extends React.Component {
               </Col>
             </Row>
             <Row>
-              <Col md={6} mdOffset={3}>
+              <Col
+                lg={4} lgOffset={4}
+                md={6} mdOffset={3}
+                sm={8} smOffset={2}
+                xs={12}
+              >
                 <VideoSearchContainer />
               </Col>
             </Row>
-            <Row>
-              <VideoResultsContainer />
-            </Row>
           </Grid>
+          <div className={s.videos}>
+            <VideoResultsContainer />
+          </div>
         </div>
       </Provider>
     );
