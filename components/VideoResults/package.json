@@ -1,0 +1,6 @@
+{
+  "name": "VideoResults",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./VideoResults.js"
+}
