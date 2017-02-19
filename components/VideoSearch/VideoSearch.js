@@ -1,14 +1,14 @@
 import React from 'react';
 import { FormControl } from 'react-bootstrap';
 
-const Search = ({ updateQuery }) => (
+const VideoSearch = ({ isMobile, searchVideos }) => (
   <div>
     <FormControl
       type="text"
       placeholder="Search..."
-      onKeyUp={(e) => updateQuery(e.target.value, e.key === 'Enter')}
+      onKeyUp={(e) => (isMobile || e.key === 'Enter') && searchVideos(e.target.value)}
     />
   </div>
 );
 
-export default Search;
+export default VideoSearch;
