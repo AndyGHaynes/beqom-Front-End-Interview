@@ -2,7 +2,7 @@ import React from 'react';
 import Video from '../Video';
 import { Grid, Row, Col, Well } from 'react-bootstrap';
 
-const VideoResults = ({ videos }) => (
+export default ({ videos }) => (
   <Grid>
     <Row>
       {videos.map((video, i) => (
@@ -15,5 +15,3 @@ const VideoResults = ({ videos }) => (
     </Row>
   </Grid>
 );
-
-export default VideoResults;

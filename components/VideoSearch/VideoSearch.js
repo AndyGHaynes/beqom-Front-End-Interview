@@ -1,7 +1,7 @@
 import React from 'react';
 import { FormControl } from 'react-bootstrap';
 
-const VideoSearch = ({ isMobile, searchVideos }) => (
+export default ({ isMobile, searchVideos }) => (
   <div>
     <FormControl
       type="text"
@@ -10,5 +10,3 @@ const VideoSearch = ({ isMobile, searchVideos }) => (
     />
   </div>
 );
-
-export default VideoSearch;

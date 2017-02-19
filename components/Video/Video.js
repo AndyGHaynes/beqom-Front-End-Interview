@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './Video.css';
 
-const Video = ({ video }) => (
+export default ({ video }) => (
   <div className={s.video}>
     <div className={s.title}>
       {video.title}
@@ -36,5 +36,3 @@ const Video = ({ video }) => (
     </div>
   </div>
 );
-
-export default Video;
