@@ -9,7 +9,7 @@ module.exports = {
   },
   module: {
     loaders: [{
-      test: /.js?$/,
+      test: /.js$/,
       loader: 'babel-loader',
       exclude: /node_modules/,
       query: {
@@ -17,6 +17,16 @@ module.exports = {
           'es2015',
           'react'
         ]
+      }
+    }, {
+      test: /\.css/,
+      loader: 'style-loader'
+    }, {
+      test: /\.css/,
+      loader: 'css-loader',
+      query: {
+        modules: true,
+        localIdentName: '[name]__[local]__[hash:base64:5]'
       }
     }]
   }
