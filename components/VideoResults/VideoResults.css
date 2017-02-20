@@ -1,0 +1,12 @@
+.searchSpinner {
+  position: relative;
+  left: 48%;
+  top: 10%;
+}
+
+.searchError {
+  background-color: red;
+  color: white;
+  border-radius: 8px;
+  padding: 1em;
+}

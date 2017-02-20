@@ -4,7 +4,9 @@ import VideoResults from '../components/VideoResults';
 
 function mapState(state) {
   return {
-    videos: state.videoSearch.results
+    searchPending: state.videoSearch.searchPending,
+    videos: state.videoSearch.results,
+    error: state.videoSearch.error
   };
 }
 
