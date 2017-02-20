@@ -6,7 +6,7 @@ export default ({ isMobile, searchVideos }) => (
     <FormControl
       type="text"
       placeholder="Search..."
-      onKeyUp={(e) => (isMobile || e.key === 'Enter') && searchVideos(e.target.value)}
+      onKeyUp={(e) => (isMobile || e.key === 'Enter') && searchVideos(e.target.value.toLowerCase())}
     />
   </div>
 );
