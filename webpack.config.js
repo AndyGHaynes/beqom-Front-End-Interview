@@ -30,5 +30,10 @@ module.exports = {
         localIdentName: '[name]__[local]__[hash:base64:5]'
       }
     }]
-  }
+  },
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin({
+      compress: { warnings: false }
+    })
+  ]
 };
