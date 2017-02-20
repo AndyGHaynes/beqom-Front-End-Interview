@@ -1,4 +1,5 @@
 import React from 'react';
+import s from './VideoPlayer.css';
 import { Modal } from 'react-bootstrap';
 
 export default ({ video, modalOpen, closeModal }) => (
@@ -11,8 +12,7 @@ export default ({ video, modalOpen, closeModal }) => (
     <Modal.Body>
       <div>
         <iframe
-          width={560}
-          height={315}
+          className={s.video}
           src={video.url.replace('watch?v=', 'embed/')}
           frameBorder={0}
           allowFullScreen
