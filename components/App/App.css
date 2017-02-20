@@ -2,6 +2,16 @@
   padding: 1em 0;
 }
 
+.header {
+  font-size: 2em;
+  padding: 0.5em 1em;
+  margin-bottom: 0.5em;
+  text-align: center;
+  background-color: #333;
+  color: #0cf;
+  border-radius: 0.2em;
+}
+
 .videos {
   margin-top: 2em;
 }

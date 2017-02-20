@@ -26,7 +26,9 @@ class App extends React.Component {
           <Grid>
             <Row>
               <Col md={12}>
-                Header
+                <div className={s.header}>
+                  Video Search Demo
+                </div>
               </Col>
             </Row>
             <Row>
