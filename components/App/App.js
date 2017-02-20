@@ -11,7 +11,12 @@ import { Grid, Row, Col } from 'react-bootstrap';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.store = createStore(rootReducer, applyMiddleware(thunk));
+    /*
+      Look for 'Mobi' in the user-agent string, not perfect but will suffice for the purposes of this app:
+      https://developer.mozilla.org/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent#Mobile_Tablet_or_Desktop
+     */
+    const isMobile = /Mobi/.test(window.navigator.userAgent);
+    this.store = createStore(rootReducer, { isMobile }, applyMiddleware(thunk));
   }
 
   render() {
