@@ -10,7 +10,8 @@ export default function(state = initialState, action) {
   switch (action.type) {
     case actionTypes.VideoSearchPending:
       return Object.assign({}, state, {
-        searchPending: true
+        searchPending: true,
+        results: []
       });
     case actionTypes.VideoSearchError:
       return Object.assign({}, state, {
