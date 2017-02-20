@@ -1,5 +1,5 @@
 export default {
-  searchUrl: 'http://jsonstub.com/beqominterview/javascript', // TODO: replace w/ real url
+  searchUrl: 'http://jsonstub.com/beqominterview/',
   searchHeaders: {
     'Content-Type': 'application/json',
     'JsonStub-User-Key': '84e0aeb9-9302-43c8-8e60-15a0fda7981a',

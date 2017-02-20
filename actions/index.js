@@ -23,14 +23,19 @@ function searchVideos(query) {
     // update the state to indicate search has started
     dispatch(videoSearchPending());
 
-    // TODO: append query to url
-    await fetch(config.searchUrl, {
+    await fetch(`${config.searchUrl}${query}`, {
       type: 'GET',
       headers: config.searchHeaders
     })
     .then(response => response.json())
-    .then(json => dispatch(updateVideoResults(json)))
-    .catch(reason => dispatch(videoSearchError, reason));
+    .then(json => {
+      if (json.error) {
+        dispatch(videoSearchError(json.error));
+      } else {
+        dispatch(updateVideoResults(json));
+      }
+    })
+    .catch(ex => dispatch(videoSearchError(ex.message)));
   }
 }
 

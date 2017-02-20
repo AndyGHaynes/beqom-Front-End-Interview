@@ -20,7 +20,8 @@ export default function(state = initialState, action) {
     case actionTypes.UpdateVideoResults:
       return Object.assign({}, state, {
         videos: action.videos,
-        searchPending: false
+        searchPending: false,
+        error: ''
       });
     default:
       return state;
