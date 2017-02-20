@@ -3,7 +3,7 @@ import { Modal } from 'react-bootstrap';
 
 export default ({ video, modalOpen, closeModal }) => (
   <Modal show={modalOpen} onHide={closeModal}>
-    <Modal.Header>
+    <Modal.Header closeButton>
       <Modal.Title>
         {video.title}
       </Modal.Title>
