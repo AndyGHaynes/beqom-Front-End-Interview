@@ -23,8 +23,8 @@ class Video extends React.Component {
         <img
           className={s.preview}
           src={video.pic}
-          width={240}
-          height={180}
+          width={260}
+          height={195}
         />
         <div className={s.play}>
           {/*

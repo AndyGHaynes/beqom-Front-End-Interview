@@ -1,6 +1,6 @@
 .video {
   padding: 0.8em 0.5em;
-  min-height: 380px;
+  min-height: 400px;
   cursor: pointer;
 }
 
@@ -17,7 +17,7 @@
 }
 
 .preview {
-  padding-left: 3%;
+  padding-left: 4%;
 }
 
 .title {
