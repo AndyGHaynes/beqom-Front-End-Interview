@@ -1,12 +1,12 @@
 import actionTypes from '../actions/types';
 
 const initialState = {
-  results: [],
+  videos: [],
   searchPending: false,
   error: ''
 };
 
-export default function (state = initialState, action) {
+export default function(state = initialState, action) {
   switch (action.type) {
     case actionTypes.VideoSearchPending:
       return Object.assign({}, state, {
@@ -19,7 +19,7 @@ export default function (state = initialState, action) {
       });
     case actionTypes.UpdateVideoResults:
       return Object.assign({}, state, {
-        results: action.videos,
+        videos: action.videos,
         searchPending: false
       });
     default:
