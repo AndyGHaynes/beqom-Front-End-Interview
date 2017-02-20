@@ -1,7 +1,5 @@
 .searchSpinner {
-  position: relative;
-  left: 48%;
-  top: 10%;
+  margin-left: 48%;
 }
 
 .searchError {

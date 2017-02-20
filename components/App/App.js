@@ -26,7 +26,6 @@ class App extends React.Component {
             </Row>
             <Row>
               <Col
-                lg={4} lgOffset={4}
                 md={6} mdOffset={3}
                 sm={8} smOffset={2}
                 xs={12}

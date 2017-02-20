@@ -12,12 +12,14 @@ export default ({ searchPending, videos, error }) => (
         </div>
       )}
       {searchPending && (
-        <div className={s.searchSpinner}>
-          <i className="fa fa-spinner fa-pulse fa-4x" />
+        <div>
+          <span className={s.searchSpinner}>
+            <i className="fa fa-spinner fa-pulse fa-4x" />
+          </span>
         </div>
       )}
       {!searchPending && videos.map((video, i) => (
-        <Col key={i} lg={3} md={4} sm={6} xs={12}>
+        <Col key={i} md={4} sm={6} xs={12}>
           <Well bsSize="small">
             <Video video={video} />
           </Well>
